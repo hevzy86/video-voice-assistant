@@ -1,4 +1,4 @@
-# Alloy Voice Assistant
+# Voice Assistant
 
 A modern voice assistant with both speech and text chat capabilities, built with Next.js and Python.
 
