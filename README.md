@@ -1,81 +1,25 @@
-# Voice Assistant
+# Sample AI assistant
 
-A modern voice assistant with both speech and text chat capabilities, built with Next.js and Python.
+You need an `OPENAI_API_KEY` and a `GOOGLE_API_KEY` to run this code. Store them in a `.env` file in the root directory of the project, or set them as environment variables.
 
-## Features
 
-- Voice input enabled by default
-- Text chat support
-- Real-time speech-to-text conversion
-- Modern, responsive UI
-- Seamless integration with OpenAI's GPT-4
-
-## Prerequisites
-
-- Node.js 18+ and npm
-- Python 3.8+
-- OpenAI API key
-
-## Setup
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-cd alloy-voice-assistant
-```
-
-2. Set up the frontend:
-
-```bash
-cd frontend
-npm install
-```
-
-3. Set up the backend:
-
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-4. Create a `.env` file in the root directory with your OpenAI API key:
+If you are running the code on Apple Silicon, run the following command:
 
 ```
-OPENAI_API_KEY=your_api_key_here
+$ brew install portaudio
 ```
 
-## Running the Application
+Create a virtual environment, update pip, and install the required packages:
 
-1. Start the backend server:
-
-```bash
-cd backend
-python app.py
+```
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ pip install -U pip
+$ pip install -r requirements.txt
 ```
 
-2. In a new terminal, start the frontend development server:
+Run the assistant:
 
-```bash
-cd frontend
-npm run dev
 ```
-
-3. Open your browser and navigate to `http://localhost:3000`
-
-## Usage
-
-- The voice assistant starts listening automatically when you open the page
-- Click the microphone button to toggle voice input
-- Type in the text input field for text-based chat
-- Press Enter or click the send button to send text messages
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+$ python3 assistant.py
+```
